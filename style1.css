@@ -1,0 +1,374 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    z-index: 100;
+}
+
+.logo-container {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: 200px;
+    image-resolution: 100%;
+}
+
+
+button {
+    background-color: #512da8;
+    color: #fff;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 10px 45px;
+    /* Adjust these values if needed */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s ease;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.6s ease;
+    z-index: 0;
+}
+
+button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+button:hover {
+    color: white;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(81, 45, 168, 0.5);
+}
+
+button span {
+    position: relative;
+    z-index: 1;
+    /* Ensure text is above the pseudo-element */
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 101;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f39c12;
+    font-size: 20px;
+}
+/* Responsive Styling */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 14px;
+        z-index: 100;
+    }
+}
+
+.bg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+
+.page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+.page1 h1 {
+    font-size: 140px;
+    font-weight: 800;
+    position: relative;
+}
+
+.page1 h1::before {
+    content: "Save Environment";
+    position: absolute;
+    color: #000;
+    top: -8px;
+    left: -8px;
+    -webkit-text-stroke: 1px #95c11e;
+    z-index: -1;
+}
+
+.page1 h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.page1 p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.page2 {
+    height: 100vh;
+    width: 100vw;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+}
+
+
+
+footer {
+    position: relative;
+   background-color: darkgreen;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+footer .social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #FFEB3B;
+    /* Yellow hover effect */
+}
+.fa-brands{
+    font-size: 25px;
+
+}
+.fa-brands:hover{
+    font-size: 30px;
+    color: #f39c12;
+}
+footer .eco-tips {
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+footer .eco-tips span {
+    cursor: pointer;
+    color: #FFEB3B;
+    transition: color 0.3s ease;
+}
+
+footer .eco-tips span:hover {
+    color: #4CAF50;
+    /* Green hover effect */
+}
+
+/* Floating leaves */
+.leaf {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url('https://cdn.pixabay.com/photo/2017/08/30/12/45/leaf-2690441_1280.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: floatLeaf 10s linear infinite;
+}
+
+/* Keyframe for floating leaves animation */
+@keyframes floatLeaf {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(300px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Making floating leaves appear at different speeds and sizes */
+.leaf:nth-child(2) {
+    left: 10%;
+    animation-duration: 12s;
+    transform: scale(0.8);
+}
+
+.leaf:nth-child(3) {
+    left: 30%;
+    animation-duration: 14s;
+    transform: scale(0.6);
+}
+
+.leaf:nth-child(4) {
+    left: 50%;
+    animation-duration: 16s;
+}
+
+.leaf:nth-child(5) {
+    left: 70%;
+    animation-duration: 10s;
+    transform: scale(0.9);
+}
+
+.leaf:nth-child(6) {
+    left: 90%;
+    animation-duration: 18s;
+    transform: scale(1.2);
+}
+
+
+.page2 h1 {
+    text-align: center;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 80px;
+    margin-top: 100px;
+    padding-top: 100px;
+}
+
+.nature-tips {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nature-tips ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nature-tips li {
+    background-color:rgb(126, 126, 60);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nature-tips li:hover {
+    background-color: darkblue;
+}
+
+.nature-tips li:before {
+    content: "🌿";
+    margin-right: 10px;
+}
+
+.nature-tips p {
+    margin: 0;
+    font-size: 1.1em;
+}
+  /* 3-dot menu styles */
+  .menu-btn {
+    margin-left: 25px;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    background: none;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #000;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #555;
+}
+
+/* Show dropdown when active */
+.show {
+    display: block;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      body{
+        background-color: blanchedalmond;
+      }
+  h1{
+    font-size: 72px;
+    text-align: center;
+    background: -webkit-linear-gradient(brown, black);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }    
+#about-us{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#about-us img {
+    height: 440px;
+    width: 440px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+#about-us-in{
+    width: 50%;
+    text-align: center;
+}
+#about-us-in h3 {
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+#about-us-in p {
+    font-size: 20px;
+    line-height: 26px;
+}
+#cards-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+}
+.card{
+    height: 40%;
+    width: 28%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+}
+#card1 {
+    background-image: url(harsh.jpg);
+}
+#card2 {
+    background-image: url(ansh.jpg);
+    background-position: top;
+}
+#card3 {
+    background-image: url(shubham.jpg);
+    background-position: top;
+}
+#card4{
+  background-image: url(aakash.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#card5{
+  background-image: url(nilesh.jpg);
+  background-position: top;
+}
+#card6{
+  background-image: url(vedansh.jpg);
+  background-position: top;
+}
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #95c11e;
+    padding: 30px;
+    padding-top: 160px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+.overlay h4 {
+    color: #000;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+.overlay p {
+    color: #000;
+    font-size: 15px;
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+.card:hover{
+    transform: rotate3d(-1,1,0,20deg);
+}
+.fa-solid{
+  font-size: xx-large;
+  color: #000;
+  padding-left: 25px;
+}
+    </style>
+</head>
+<body>
+  <header>
+    <a href="home.html"><i class="fa-solid fa-house"></i></a>
+  </header>
+  <h1>About Us</h1>
+    <div id="cards-container">
+        <div class="card" id="card1">
+          <div class="overlay">
+            <h4>Harsh Kumar</h4>
+            <p>
+             Full-Stack developer.
+             Student Of Vidya Bharati Chinmaya 
+             <br>Vidyalaya and Institute Of Technical Education and Reasearch
+           
+            </p>
+          </div>
+        </div>
+        <div class="card" id="card2">
+          <div class="overlay">
+            <h4>Ansh Chauhan</h4>
+          </div>
+        </div>
+        <div class="card" id="card3">
+          <div class="overlay">
+            <h4>Shubham Sharma</h4>
+          </div>
+        </div>
+        <div class="card" id="card4">
+            <div class="overlay">
+              <h4>Aakash Kumar</h4>
+            </div>
+          </div>
+          <div class="card" id="card5">
+            <div class="overlay">
+              <h4>Nilesh Kumar</h4>
+            </div>
+          </div>
+          <div class="card" id="card6">
+            <div class="overlay">
+              <h4>Vedansh Jaiswal</h4>
+            </div>
+          </div>
+      </div>
+</body>
+</html>

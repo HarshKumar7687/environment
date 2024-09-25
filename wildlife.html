@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="https://www.ecoarch.pt/Logo_EcoArch_White.png" alt="Logo">
+            </div>
+        </div>
+        <div class="click">
+            <nav>
+                <a href="home.html"><i class="fa-solid fa-house"></i></a>
+                <a href="waste.html">Waste Collected</a>
+                <a href="recycle.html">Waste Usage</a>
+                <a href="index.html">Login</a>
+
+                
+                <!-- 3-dot menu after login -->
+            <button class="menu-btn" id="menu-btn"><i class="fa-solid fa-bars"></i></button>
+            <div class="dropdown-menu" id="dropdown-menu">
+                
+                <a href="aboutUs.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="contact.html">Contact</a>
+                <a href="index.html">Logout</a>
+            </div>  
+            </nav>
+        </div>
+    </header>
+    <h1>Wild-Life Monitoring System</h1>
+    <br>
+    <div class="wildlife-capture">
+        <div class="Lion  animal">
+            <h3>Drone 1</h3>
+            <a href="https://cdn.pixabay.com/video/2021/11/01/94169-641767865_large.mp4"><video id="video1" autoplay loop muted src="https://cdn.pixabay.com/video/2021/11/01/94169-641767865_large.mp4"></video></a>
+            <div class="buttons">
+                <button id="pause1" onclick="togglePlayPause('video1', 'pause1')"><span>Pause</span></button>
+                <button id="thermal1"><span>Thermal Mode</span></button>
+            </div>
+        </div>
+        <div class="squirrel  animal">
+            <h3>Drone 2</h3>
+            <a href="https://cdn.pixabay.com/video/2021/01/31/63677-507811711_large.mp4"><video id="video2" autoplay loop muted src="https://cdn.pixabay.com/video/2021/01/31/63677-507811711_large.mp4"></video></a>
+            <div class="buttons">
+                <button id="pause2" onclick="togglePlayPause('video2', 'pause2')"><span>Pause</span></button>
+                <button id="thermal2"><span>Thermal Mode</span></button>
+            </div>
+        </div>
+        <div class="Elephant animal">
+            <h3>Drone 3</h3>
+            <a href="https://cdn.pixabay.com/video/2024/07/03/219323_large.mp4"><video id="video3" autoplay loop muted src="https://cdn.pixabay.com/video/2024/07/03/219323_large.mp4"></video></a>
+            <div class="buttons">
+                <button id="pause3" onclick="togglePlayPause('video3', 'pause3')"><span>Pause</span></button>
+                <button id="thermal3"><span>Thermal Mode</span></button>
+            </div>
+        </div>
+        <div class="aqua  animal">
+            <h3>Drone 4</h3>
+           <a href="https://cdn.pixabay.com/video/2022/08/13/127713-739309133_large.mp4"> <video id="video4" autoplay loop muted src="https://cdn.pixabay.com/video/2022/08/13/127713-739309133_large.mp4"></video></a>
+            <div class="buttons">
+                <button id="pause4" onclick="togglePlayPause('video4', 'pause4')"><span>Pause</span></button>
+                <button id="thermal4"><span>Thermal Mode</span></button>
+            </div>
+        </div>
+        <div class="monkey  animal">
+            <h3>Drone 5</h3>
+            <a href="https://cdn.pixabay.com/video/2019/09/23/27160-362518458_large.mp4"><video id="video5" autoplay loop muted src="https://cdn.pixabay.com/video/2019/09/23/27160-362518458_large.mp4"></video></a>
+            <div class="buttons">
+                <button  id="pause5" onclick="togglePlayPause('video5', 'pause5')"><span>Pause</span></button>
+                <button id="thermal5"><span>Thermal Mode</span></button>
+            </div>
+        </div>
+        <div class="web-cam  animal">
+            <h3>Drone 6</h3>
+            <video id="video6" autoplay="true"></video>
+            <div class="buttons">
+                <button  id="pause6" onclick="togglePlayPause('video6', 'pause6')"><span>Pause</span></button>
+                <button id="thermal6"><span>Thermal Mode</span></button>
+            </div>
+        </div>
+        <div class="butterfly  animal">
+            <h3>Drone 7</h3>
+            <a href="https://cdn.pixabay.com/video/2021/07/08/80673-572853719_large.mp4"><video id="video7" autoplay loop muted src="https://cdn.pixabay.com/video/2021/07/08/80673-572853719_large.mp4"></video></a>
+            <div class="buttons">
+                <button  id="pause7" onclick="togglePlayPause('video7', 'pause7')"><span>Pause</span></button>
+                <button id="thermal7"><span>Thermal Mode</span></button>
+            </div>
+        </div>
+        <div class="peacock  animal">
+            <h3>Drone 8</h3>
+            <a href="https://cdn.pixabay.com/video/2024/03/23/205373-926737246_large.mp4"><video id="video8" autoplay loop muted src="https://cdn.pixabay.com/video/2024/03/23/205373-926737246_large.mp4"></video></a>
+            <div class="buttons">
+                <button  id="pause8" onclick="togglePlayPause('video8', 'pause8')"><span>Pause</span></button>
+                <button id="thermal8"><span>Thermal Mode</span></button>
+            </div>
+        </div>
+        <div class="monkey  animal">
+            <h3>Drone 9</h3>
+            <a href="https://cdn.pixabay.com/video/2024/06/06/215533_large.mp4"><video id="video9" autoplay loop muted src="https://cdn.pixabay.com/video/2024/06/06/215533_large.mp4"></video></a>
+            <div class="buttons">
+                <button  id="pause9" onclick="togglePlayPause('video9', 'pause9')"><span>Pause</span></button>
+                <button id="thermal9"><span>Thermal Mode</span></button>
+            </div>
+        </div>
+        <div class="gorilla  animal">
+            <h3>Drone 10</h3>
+            <a href="https://cdn.pixabay.com/video/2021/07/01/79747-570129564_large.mp4"><video id="video10" autoplay loop muted src="https://cdn.pixabay.com/video/2021/07/01/79747-570129564_large.mp4"></video></a>
+            <div class="buttons">
+                <button  id="pause10" onclick="togglePlayPause('video10', 'pause10')"><span>Pause</span></button>
+                <button id="thermal10"><span>Thermal Mode</span></button>
+            </div>
+        </div>
+        <div class="bird  animal">
+            <h3>Drone 11</h3>
+            <a href="https://cdn.pixabay.com/video/2023/11/05/187970-881517500_large.mp4"><video id="video11" autoplay loop muted src="https://cdn.pixabay.com/video/2023/11/05/187970-881517500_large.mp4"></video></a>
+            <div class="buttons">
+                <button  id="pause11" onclick="togglePlayPause('video11', 'pause11')"><span>Pause</span></button>
+                <button id="thermal11"><span>Thermal Mode</span></button>
+            </div>
+        </div>
+        <div class="leapord  animal">
+            <h3>Drone 12</h3>
+            <a href="https://cdn.pixabay.com/video/2022/04/22/114722-702451354_large.mp4"><video id="video12" autoplay loop muted src="https://cdn.pixabay.com/video/2022/04/22/114722-702451354_large.mp4"></video></a>
+            <div class="buttons">
+                <button  id="pause12" onclick="togglePlayPause('video12', 'pause12')"><span>Pause</span></button>
+                <button id="thermal12"><span>Thermal Mode</span></button>
+            </div>
+        </div>
+    </div>
+    <script src="app2.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="https://www.ecoarch.pt/Logo_EcoArch_White.png" alt="Logo">
+            </div>
+        </div>
+        <div class="click">
+            <nav>
+                <a href="wildlife.html">Wildlife-Navigation System</a>
+                <a href="waste.html">Waste Collected</a>
+                <a href="recycle.html">Waste Usage</a>
+                <a href="index.html">Login</a>
+
+
+                <!-- 3-dot menu after login -->
+            <button class="menu-btn" id="menu-btn"><i class="fa-solid fa-bars"></i></button>
+            <div class="dropdown-menu" id="dropdown-menu">
+                
+                <a href="aboutUs.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="contact.html">Contact</a>
+                <a href="index.html">Logout</a>
+            </div>  
+            </nav>
+           
+        </div>
+    </header>
+
+    <main id="main">
+        <video class="bg" autoplay loop muted
+            src="https://videos.pexels.com/video-files/20584448/20584448-uhd_2560_1440_60fps.mp4"></video>
+        <div class="page1">
+            <canvas id="bubbleCanvas"></canvas>
+            <h1>Save Environment</h1>
+            <h2>Welcome to Eco-Arch</h2>
+            <p>Preserving nature today for a sustainable tomorrow. Together, we can create a greener, cleaner future.
+                <br>
+                We are a team for the betterment of mother earth.
+                <br>
+                We use drones with sensors to take a look at wildlife and take care of their health.
+                <br>
+                We raise funds by selling products made by recycled waste of forest.
+                <br>
+                We clear tons of waste that are harmful, from forests and natural habitats.
+            </p>
+        </div>
+        <div class="page2">
+            <h1>How to Protect Nature and Wildlife</h1>
+
+            <div class="nature-tips">
+                <ul>
+                    <li>
+                        <p><strong>Reduce, Reuse, Recycle:</strong> Cut down on waste by recycling and using products
+                            that have a minimal environmental impact.</p>
+                    </li>
+                    <li>
+                        <p><strong>Conserve Water:</strong> Use water-saving techniques such as fixing leaky taps and
+                            reducing water wastage in your home.</p>
+                    </li>
+                    <li>
+                        <p><strong>Support Wildlife Conservation:</strong> Donate to or volunteer with organizations
+                            working to protect endangered species and habitats.</p>
+                    </li>
+                    <li>
+                        <p><strong>Avoid Single-Use Plastics:</strong> Choose reusable bags, bottles, and containers to
+                            reduce plastic pollution in oceans and wildlife habitats.</p>
+                    </li>
+                    <li>
+                        <p><strong>Use Eco-Friendly Products:</strong> Switch to biodegradable and eco-friendly
+                            household products to reduce harmful chemical waste.</p>
+                    </li>
+                </ul>
+            </div>
+            <footer>
+                <div class="social-links">
+                    <a href="https://en-gb.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="eco-tips">
+                    <span>🌿 Tip: Save water by turning off taps!</span> |
+                    <span>🌍 Tip: Use reusable bags!</span> |
+                    <span>♻️ Tip: Reduce, Reuse, Recycle!</span>
+                </div>
+
+                <!-- Floating leaves -->
+                <div class="leaf"></div>
+                <div class="leaf"></div>
+                <div class="leaf"></div>
+                <div class="leaf"></div>
+                <div class="leaf"></div>
+                <div class="leaf"></div>
+            </footer>
+        </div>
+    </main>
+    
+    <!--Go to gsap cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--Scroll trigger-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="app1.js"></script>
+</body>
+
+</html>
